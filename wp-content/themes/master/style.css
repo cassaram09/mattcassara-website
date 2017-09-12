@@ -316,9 +316,9 @@ a img.aligncenter {
 }
 
 .main-col{
-	background: blue;
+	background: #eee;
 	flex-grow: 1;
-	color: #fff;
+	color: #333;
 	overflow: scroll;
   height: 100vh;
   padding-bottom:20px;
