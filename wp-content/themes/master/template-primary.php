@@ -1,4 +1,4 @@
-<?php /* Template Name: Demo Page Template */ get_header(); ?>
+<?php /* Template Name: Primary Template */ get_header(); ?>
 
 	<main role="main">
 		<!-- section -->
@@ -13,8 +13,6 @@
 
 				<?php the_content(); ?>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
-
 				<br class="clear">
 
 				<?php edit_post_link(); ?>
@@ -22,24 +20,11 @@
 			</article>
 			<!-- /article -->
 
-		<?php endwhile; ?>
-
-		<?php else: ?>
-
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
-
-		<?php endif; ?>
+		<?php endwhile; endif; ?>
 
 		</section>
 		<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
