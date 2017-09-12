@@ -75,10 +75,10 @@ input:focus {
 
 /* wrapper */
 .wrapper {
-	max-width:1280px;
-	width:95%;
-	margin:0 auto;
-	position:relative;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
 }
 /* header */
 .header {
@@ -304,4 +304,34 @@ a img.aligncenter {
 	h3 {
 		page-break-after:avoid;
 	}
+}
+
+
+
+
+.nav-col{
+	background: red;
+	flex: 0 0 200px;
+	height: 100vh;
+}
+
+.main-col{
+	background: blue;
+	flex-grow: 1;
+	color: #fff;
+	overflow: scroll;
+  height: 100vh;
+  padding-bottom:20px;
+}
+
+footer {
+	color: #fff;
+	background: #333;
+	position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+
+footer p {
+	margin: 0px;
 }

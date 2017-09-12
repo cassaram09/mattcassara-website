@@ -25,11 +25,13 @@
 	</head>
 	<body <?php body_class(); ?>>
 
+  <div>
+
 		<!-- wrapper -->
-		<div class="wrapper">
+		<div class='wrapper'>
 
 			<!-- header -->
-			<header class="header clear" role="banner">
+			<header class="header clear nav-col" role="banner">
 
 					<!-- logo -->
 					<div class="logo">
