@@ -1,19 +1,21 @@
 .navigation{
-
   background: $outer-space;
   color: $white;
   flex: 0 0 200px;
   height: 100vh;
+  padding: 20px; 
 
   .nav {
     ul{
       list-style: none;
+      padding: 0px;
       li {
+        margin: 10px 0px;
         a{
           text-decoration: none;
           font-weight: bold;
-          color: $white;
-          font-size: 20px;
+          color: $wheat;
+          font-size: 16px;
         }
       }
     }

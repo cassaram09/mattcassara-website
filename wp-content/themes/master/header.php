@@ -25,6 +25,11 @@
       });
     </script>
 
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+      crossorigin="anonymous"></script>
+
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -33,13 +38,23 @@
 		<div class='wrapper'>
 
 			<!-- header -->
-			<header class="header clear navigation" role="banner">
+			<header class="navigation" role="banner">
+
+        <h1>Matt Cassara</h1>
+
+        <h2>Full Stack Developer</h2>
 
 				<!-- nav -->
 				<nav class="nav" role="navigation">
 					<?php html5blank_nav(); ?>
 				</nav>
-				<!-- /nav -->
+
+        <nav class="mobile-nav" role="navigation">
+          <a class='toggleNav' href='#'>
+            <span class='menu-line' id='topLine'></span>
+            <span class='menu-line' id='mideLine'></span>
+            <span class='menu-line' id='bottomLine'></span>
+          </a>
+        </nav>
 
 			</header>
-			<!-- /header -->
