@@ -8,6 +8,7 @@
     $('#toggleNav').click(function(){
       $('.menu-overlay').toggleClass('visible')
       $('body').toggleClass('scroll-locked')
+      $('.menu-line').toggleClass('rotated')
     })
 		
 	});

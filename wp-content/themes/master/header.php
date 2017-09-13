@@ -57,7 +57,7 @@
         <nav class="mobile-nav" role="navigation">
           <a id='toggleNav' href='#'>
             <span class='menu-line' id='topLine'></span>
-            <span class='menu-line' id='mideLine'></span>
+            <span class='menu-line' id='middleLine'></span>
             <span class='menu-line' id='bottomLine'></span>
           </a>
         </nav>

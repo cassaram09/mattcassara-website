@@ -16,6 +16,7 @@
 @import 'simplegrid';
 @import 'navigation';
 
+
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
@@ -144,7 +145,7 @@ input:focus {
       display: block;
       padding: 20px;
       h1 {
-        margin-top: 0px;
+        margin: 0px;
       }
     }
 
@@ -282,11 +283,33 @@ input:focus {
   display: none;
 
   .menu-line{
+     transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+   -moz-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+   -webkit-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
     background: $wheat;
     height: 3px;
     width: 30px;
     display: block;
     margin: 5px;
+  }
+
+  #topLine{
+    &.rotated{
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+  }
+
+  #middleLine{
+    opacity: 1;
+    &.rotated{
+      opacity: 0;
+    }
+  }
+
+  #bottomLine{
+    &.rotated{
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
   }
 }
 footer {

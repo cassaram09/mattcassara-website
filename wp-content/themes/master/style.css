@@ -668,7 +668,7 @@ input:focus {
     display: block;
     padding: 20px; }
     body .navigation h1 {
-      margin-top: 0px; }
+      margin: 0px; }
   body .main-col {
     height: auto;
     padding: 20px; }
@@ -766,11 +766,22 @@ input:focus {
 .mobile-nav {
   display: none; }
   .mobile-nav .menu-line {
+    transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+    -moz-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+    -webkit-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
     background: #e5dfb0;
     height: 3px;
     width: 30px;
     display: block;
     margin: 5px; }
+  .mobile-nav #topLine.rotated {
+    transform: rotate(45deg) translate(6px, 6px); }
+  .mobile-nav #middleLine {
+    opacity: 1; }
+    .mobile-nav #middleLine.rotated {
+      opacity: 0; }
+  .mobile-nav #bottomLine.rotated {
+    transform: rotate(-45deg) translate(5px, -5px); }
 
 footer {
   color: #fff;
