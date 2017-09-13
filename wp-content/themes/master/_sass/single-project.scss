@@ -1,0 +1,33 @@
+.single-project {
+  .title{
+    margin: 20px 0px;
+  }
+
+  .description{
+
+  }
+
+  .featured-image {
+    img{
+      width:100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+
+  .gallery {
+    .gallery-image{
+      display: inline-block;
+      width: 200px;
+      border: 5px solid $outer-space;
+      box-sizing: border-box;
+      margin: 10px;
+
+      img{
+        width:100%;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+  }
+}
