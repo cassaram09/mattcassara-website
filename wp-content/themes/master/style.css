@@ -696,20 +696,21 @@ input:focus {
 
 .nav-col {
   background: #46494c;
+  color: #fff;
   flex: 0 0 200px;
   height: 100vh; }
 
 .main-col {
-  background: #eee;
+  background: #fff;
   flex-grow: 1;
-  color: #333;
+  color: #4c5c68;
   overflow: scroll;
   height: 100vh;
   padding-bottom: 20px; }
 
 footer {
   color: #fff;
-  background: #333;
+  background: #456990;
   position: absolute;
   width: 100%;
   bottom: 0px; }

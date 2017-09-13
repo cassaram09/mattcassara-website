@@ -6,14 +6,25 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
+var browserSync = require('browser-sync').create();
 
 var paths = {
   sass: './wp-content/themes/master/_sass/*.scss',
-  css: './wp-content/themes/master'
+  css: './wp-content/themes/master',
+  theme: './wp-content/themes/master/*.*'
 };
 
-gulp.task('default', ['sass']);
+gulp.task('browser-sync', function() {
+    //watch files
+    var files = [paths.theme]
 
+    //initialize browsersync
+    browserSync.init(files, {
+    proxy: "development/personal/mattcassara-website/",
+    notify: false
+    });
+});
+ 
 gulp.task('sass', function(done) {
   gulp.src('./wp-content/themes/master/_sass/style.scss')
     .pipe(sass())
@@ -27,6 +38,7 @@ gulp.task('sass', function(done) {
     .on('end', done);
 });
 
-gulp.task('watch', ['sass'], function() {
+gulp.task('serve', ['sass', 'browser-sync'], function() {
   gulp.watch(paths.sass, ['sass']);
-});
+})
+

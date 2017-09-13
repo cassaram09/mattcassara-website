@@ -219,17 +219,17 @@ input:focus {
 }
 
 .main-col{
-  background: #eee;
+  background: $white;
   flex-grow: 1;
-  color: #333;
+  color: $deep-space;
   overflow: scroll;
   height: 100vh;
   padding-bottom:20px;
 }
 
 footer {
-  color: #fff;
-  background: #333;
+  color: $white;
+  background: $queen-blue;
   position: absolute;
   width: 100%;
   bottom: 0px;
