@@ -34,6 +34,11 @@
 
 	<body <?php body_class(); ?>>
 
+    <div class='menu-overlay'>
+
+        <?php html5blank_nav(); ?>
+    </div>
+
 		<!-- wrapper -->
 		<div class='wrapper'>
 
@@ -50,7 +55,7 @@
 				</nav>
 
         <nav class="mobile-nav" role="navigation">
-          <a class='toggleNav' href='#'>
+          <a id='toggleNav' href='#'>
             <span class='menu-line' id='topLine'></span>
             <span class='menu-line' id='mideLine'></span>
             <span class='menu-line' id='bottomLine'></span>

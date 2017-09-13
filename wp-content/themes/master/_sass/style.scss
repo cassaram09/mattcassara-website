@@ -37,6 +37,10 @@ html {
 body {
   font: 300 11px/1.4 $body-font, sans-serif;
   color:#444;
+
+  &.scroll-locked{
+    overflow:hidden;
+  }
 }
 
 h1, h2, h4, h4, h5, h6 {
@@ -254,6 +258,24 @@ input:focus {
   overflow: scroll;
   height: 100vh;
   padding: 20px;
+}
+
+.menu-overlay{
+  transition: height 0.25s ease-in-out, opacity 0.3s ease-in-out;
+   -moz-transition: height 0.25s ease-in-out, opacity 0.3s ease-in-out;
+   -webkit-transition: height 0.25s ease-in-out, opacity 0.3s ease-in-out;
+  background: $queen-blue;
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  opacity: 0;
+
+  &.visible{
+    height: 100vh;
+    opacity: 1;
+  }
+
 }
 
 .mobile-nav {
