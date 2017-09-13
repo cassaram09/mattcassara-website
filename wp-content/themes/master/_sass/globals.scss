@@ -1,0 +1,30 @@
+// Colors
+
+/* Coolors Exported Palette - coolors.co/d2cca1-456990-46494c-4c5c68-957964 */
+
+/* HSL */
+// $color1: hsla(53%, 35%, 73%, 1);
+// $color2: hsla(211%, 35%, 42%, 1);
+// $color3: hsla(210%, 4%, 29%, 1);
+// $color4: hsla(206%, 16%, 35%, 1);
+// $color5: hsla(26%, 20%, 49%, 1);
+
+/* RGB */
+$dark-vanilla: rgba(210, 204, 161, 1);
+$queen-blue: rgba(69, 105, 144, 1);
+$outer-space: rgba(70, 73, 76, 1);
+$deep-space: rgba(76, 92, 104, 1);
+$shadow: rgba(149, 121, 100, 1);
+$white: #fff;
+$black: #333;
+
+@font-face {
+  font-family:'Font-Name';
+  src:url('fonts/font-name.eot');
+  src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+    url('fonts/font-name.woff') format('woff'),
+    url('fonts/font-name.ttf') format('truetype'),
+    url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
