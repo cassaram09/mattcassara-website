@@ -14,6 +14,7 @@
 @import 'globals';
 @import 'normalize';
 @import 'simplegrid';
+@import 'navigation';
 
 /*------------------------------------*\
     MAIN
@@ -34,8 +35,12 @@ html {
   font-size:62.5%;
 }
 body {
-  font: 300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 300 11px/1.4 $body-font, sans-serif;
   color:#444;
+}
+
+h1, h2, h4, h4, h5, h6 {
+  font: $header-font, monospace;
 }
 /* clear */
 .clear:before,
@@ -208,14 +213,6 @@ input:focus {
   h3 {
     page-break-after:avoid;
   }
-}
-
-// Navigation Column
-.nav-col{
-  background: $outer-space;
-  color: $white;
-  flex: 0 0 200px;
-  height: 100vh;
 }
 
 .main-col{

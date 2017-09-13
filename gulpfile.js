@@ -16,7 +16,7 @@ var paths = {
 
 gulp.task('browser-sync', function() {
     //watch files
-    var files = [paths.theme]
+    var files = [paths.theme, paths.sass]
 
     //initialize browsersync
     browserSync.init(files, {

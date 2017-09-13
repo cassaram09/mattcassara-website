@@ -1,0 +1,22 @@
+.navigation{
+
+  background: $outer-space;
+  color: $white;
+  flex: 0 0 200px;
+  height: 100vh;
+
+  .nav {
+    ul{
+      list-style: none;
+      li {
+        a{
+          text-decoration: none;
+          font-weight: bold;
+          color: $white;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+}

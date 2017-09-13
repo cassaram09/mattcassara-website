@@ -33,7 +33,7 @@
 		<div class='wrapper'>
 
 			<!-- header -->
-			<header class="header clear nav-col" role="banner">
+			<header class="header clear navigation" role="banner">
 
 				<!-- nav -->
 				<nav class="nav" role="navigation">

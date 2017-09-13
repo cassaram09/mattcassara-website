@@ -10,16 +10,10 @@
   License: MIT
   License URI: http://opensource.org/licenses/mit-license.php
 */
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Raleway");
 /* Coolors Exported Palette - coolors.co/d2cca1-456990-46494c-4c5c68-957964 */
 /* HSL */
 /* RGB */
-@font-face {
-  font-family: 'Font-Name';
-  src: url("fonts/font-name.eot");
-  src: url("fonts/font-name.eot?#iefix") format("embedded-opentype"), url("fonts/font-name.woff") format("woff"), url("fonts/font-name.ttf") format("truetype"), url("fonts/font-name.svg#font-name") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -568,6 +562,19 @@ table {
     width: 0;
     height: 0; } }
 
+.navigation {
+  background: #46494c;
+  color: #fff;
+  flex: 0 0 200px;
+  height: 100vh; }
+  .navigation .nav ul {
+    list-style: none; }
+    .navigation .nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      font-size: 20px; }
+
 /*------------------------------------*    MAIN
 \*------------------------------------*/
 /* global box-sizing */
@@ -585,8 +592,11 @@ html {
   font-size: 62.5%; }
 
 body {
-  font: 300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 300 11px/1.4 "Raleway", sans-serif;
   color: #444; }
+
+h1, h2, h4, h4, h5, h6 {
+  font: "Inconsolata", monospace; }
 
 /* clear */
 .clear:before,
@@ -693,12 +703,6 @@ input:focus {
   h2,
   h3 {
     page-break-after: avoid; } }
-
-.nav-col {
-  background: #46494c;
-  color: #fff;
-  flex: 0 0 200px;
-  height: 100vh; }
 
 .main-col {
   background: #fff;
