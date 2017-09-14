@@ -173,6 +173,15 @@ input:focus {
 
 }
 
+.svg-icon {
+  display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    stroke: $wheat;
+    fill: $wheat;
+}
+
 
 
 // display
@@ -288,8 +297,9 @@ footer {
   width: 100%;
   bottom: 0px;
   padding: 5px 20px;
+  p {
+    margin: 0px;
+    text-align: right;
+  }
 }
 
-footer p {
-  margin: 0px;
-}

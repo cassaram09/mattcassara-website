@@ -30,13 +30,27 @@
       integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
       crossorigin="anonymous"></script>
 
+       <?php include("img/dev-sprite.svg"); ?>
+      <?php include_once("img/generic-sprite.svg"); ?>
+
 	</head>
 
 	<body <?php body_class(); ?>>
 
     <div class='menu-overlay'>
+      <?php html5blank_nav(); ?>
 
-        <?php html5blank_nav(); ?>
+      <svg class='svg-icon' id="si-dev-github_badge">
+        <use xlink:href="#si-dev-github_badge"></use>
+      </svg>
+
+      <svg class='svg-icon' id="si-evil-envelope">
+        <use xlink:href="#si-evil-envelope"></use>
+      </svg>
+
+      <svg class='svg-icon' id="si-evil-sc-linkedin">
+        <use xlink:href="#si-evil-sc-linkedin"></use>
+      </svg>
     </div>
 
     <nav id='mobile-nav' class="mobile-nav" role="navigation">
@@ -60,7 +74,21 @@
 				<!-- nav -->
 				<nav class="nav" role="navigation">
 					<?php html5blank_nav(); ?>
+
+          <svg class='svg-icon' id="si-dev-github_badge">
+            <use xlink:href="#si-dev-github_badge"></use>
+          </svg>
+
+          <svg class='svg-icon' id="si-evil-envelope">
+            <use xlink:href="#si-evil-envelope"></use>
+          </svg>
+
+          <svg class='svg-icon' id="si-evil-sc-linkedin">
+            <use xlink:href="#si-evil-sc-linkedin"></use>
+          </svg>
 				</nav>
+
+
 
         
 

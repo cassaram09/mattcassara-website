@@ -567,7 +567,9 @@ table {
   color: #fff;
   flex: 0 0 200px;
   padding: 20px;
-  height: 100vh; }
+  height: 100vh;
+  border-right: 2px solid #957964;
+  border-bottom: none; }
   .navigation #title {
     position: relative;
     top: 0px; }
@@ -645,7 +647,9 @@ table {
     display: block;
     padding: 5px 20px;
     position: fixed;
-    z-index: 1; }
+    z-index: 1;
+    box-shadow: 0px 0px 1px 2px #333;
+    border-right: none; }
     body .navigation h1 {
       font-size: 2em;
       margin: 0px; }
@@ -667,7 +671,7 @@ table {
     body .main-col h1 {
       margin-top: 0px; }
   body footer {
-    position: absolute; } }
+    position: relative; } }
 
 .single-project .title {
   margin: 20px 0px; }
@@ -801,6 +805,14 @@ input:focus {
 /* nav */
 /* sidebar */
 /* footer */
+.svg-icon {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+  stroke: #e5dfb0;
+  fill: #e5dfb0; }
+
 .hidden {
   visible: none;
   opacity: 0;
@@ -883,6 +895,6 @@ footer {
   width: 100%;
   bottom: 0px;
   padding: 5px 20px; }
-
-footer p {
-  margin: 0px; }
+  footer p {
+    margin: 0px;
+    text-align: right; }
