@@ -39,27 +39,29 @@
         <?php html5blank_nav(); ?>
     </div>
 
+    <nav id='mobile-nav' class="mobile-nav" role="navigation">
+      <div id='toggleNav'>
+        <span class='menu-line' id='topLine'></span>
+        <span class='menu-line' id='middleLine'></span>
+        <span class='menu-line' id='bottomLine'></span>
+      </div>
+    </nav>
+
 		<!-- wrapper -->
 		<div class='wrapper'>
 
 			<!-- header -->
-			<header class="navigation" role="banner">
+			<header id='header' class="navigation" role="banner">
 
-        <h1>Matt Cassara</h1>
+        <h1 id='title'>Matt Cassara</h1>
 
-        <h2>Full Stack Developer</h2>
+        <h2 class='subtitle'>Full Stack Developer</h2>
 
 				<!-- nav -->
 				<nav class="nav" role="navigation">
 					<?php html5blank_nav(); ?>
 				</nav>
 
-        <nav class="mobile-nav" role="navigation">
-          <a id='toggleNav' href='#'>
-            <span class='menu-line' id='topLine'></span>
-            <span class='menu-line' id='middleLine'></span>
-            <span class='menu-line' id='bottomLine'></span>
-          </a>
-        </nav>
+        
 
 			</header>

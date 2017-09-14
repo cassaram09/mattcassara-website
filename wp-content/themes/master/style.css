@@ -566,8 +566,11 @@ table {
   background: #46494c;
   color: #fff;
   flex: 0 0 200px;
-  height: 100vh;
-  padding: 20px; }
+  padding: 20px;
+  height: 100vh; }
+  .navigation #title {
+    position: relative;
+    top: 0px; }
   .navigation .nav ul {
     list-style: none;
     padding: 0px; }
@@ -578,6 +581,93 @@ table {
         font-weight: bold;
         color: #e5dfb0;
         font-size: 16px; }
+
+#toggleNav {
+  cursor: pointer; }
+
+.mobile-nav {
+  display: none; }
+  .mobile-nav .menu-line {
+    transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+    -moz-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+    -webkit-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+    background: #e5dfb0;
+    height: 3px;
+    width: 30px;
+    display: block;
+    margin: 5px; }
+  .mobile-nav #topLine.rotated {
+    transform: rotate(45deg) translate(6px, 6px); }
+  .mobile-nav #middleLine {
+    opacity: 1; }
+    .mobile-nav #middleLine.rotated {
+      opacity: 0; }
+  .mobile-nav #bottomLine.rotated {
+    transform: rotate(-45deg) translate(5px, -5px); }
+
+.menu-overlay {
+  transition: height 0.25s ease-in-out, opacity 0.3s ease-in-out;
+  -moz-transition: height 0.25s ease-in-out, opacity 0.3s ease-in-out;
+  -webkit-transition: height 0.25s ease-in-out, opacity 0.3s ease-in-out;
+  background: #46494c;
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  opacity: 0;
+  padding: 20px;
+  z-index: 20; }
+  .menu-overlay.visible {
+    height: 100vh;
+    opacity: 1;
+    z-index: 20; }
+    .menu-overlay.visible ul {
+      display: block;
+      height: auto; }
+  .menu-overlay ul {
+    display: none;
+    height: 0px;
+    list-style: none;
+    margin: 20px 0px 0px;
+    padding: 0px; }
+    .menu-overlay ul li {
+      margin: 20px 0px; }
+      .menu-overlay ul li a {
+        color: #e5dfb0;
+        font-size: 3em; }
+
+@media only screen and (max-width: 768px) {
+  body .wrapper {
+    display: block; }
+  body .navigation {
+    height: auto;
+    width: 100%;
+    display: block;
+    padding: 5px 20px;
+    position: fixed;
+    z-index: 1; }
+    body .navigation h1 {
+      font-size: 2em;
+      margin: 0px; }
+    body .navigation .subtitle {
+      display: none; }
+    body .navigation .nav {
+      display: none; }
+  body .mobile-nav {
+    display: block;
+    position: fixed;
+    top: 5px;
+    right: 20px;
+    z-index: 25; }
+  body .main-col {
+    height: auto;
+    padding: 20px 20px 60px;
+    position: relative;
+    top: 40px; }
+    body .main-col h1 {
+      margin-top: 0px; }
+  body footer {
+    position: absolute; } }
 
 .single-project .title {
   margin: 20px 0px; }
@@ -719,30 +809,8 @@ input:focus {
 /*------------------------------------*    RESPONSIVE
 \*------------------------------------*/
 @media only screen and (max-width: 768px) {
-  body .wrapper {
-    display: block; }
-  body .navigation {
-    height: auto;
-    width: 100%;
-    display: block;
-    padding: 20px; }
-    body .navigation h1 {
-      margin: 0px; }
-  body .main-col {
-    height: auto;
-    padding: 20px; }
-    body .main-col h1 {
-      margin-top: 0px; }
   body footer {
-    position: relative;
-    padding: 20px; }
-  body .nav {
-    display: none; }
-  body .mobile-nav {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px; } }
+    padding: 10px; } }
 
 /*------------------------------------*    MISC
 \*------------------------------------*/
@@ -807,50 +875,6 @@ input:focus {
   overflow: scroll;
   height: 100vh;
   padding: 20px; }
-
-.menu-overlay {
-  transition: height 0.25s ease-in-out, opacity 0.3s ease-in-out;
-  -moz-transition: height 0.25s ease-in-out, opacity 0.3s ease-in-out;
-  -webkit-transition: height 0.25s ease-in-out, opacity 0.3s ease-in-out;
-  background: #46494c;
-  display: block;
-  position: fixed;
-  width: 100%;
-  height: 0vh;
-  opacity: 0;
-  padding: 20px; }
-  .menu-overlay.visible {
-    height: 100vh;
-    opacity: 1; }
-  .menu-overlay ul {
-    list-style: none;
-    margin: 20px 0px 0px;
-    padding: 0px; }
-    .menu-overlay ul li {
-      margin: 20px 0px; }
-      .menu-overlay ul li a {
-        color: #e5dfb0;
-        font-size: 3em; }
-
-.mobile-nav {
-  display: none; }
-  .mobile-nav .menu-line {
-    transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
-    -moz-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
-    -webkit-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
-    background: #e5dfb0;
-    height: 3px;
-    width: 30px;
-    display: block;
-    margin: 5px; }
-  .mobile-nav #topLine.rotated {
-    transform: rotate(45deg) translate(6px, 6px); }
-  .mobile-nav #middleLine {
-    opacity: 1; }
-    .mobile-nav #middleLine.rotated {
-      opacity: 0; }
-  .mobile-nav #bottomLine.rotated {
-    transform: rotate(-45deg) translate(5px, -5px); }
 
 footer {
   color: #fff;
