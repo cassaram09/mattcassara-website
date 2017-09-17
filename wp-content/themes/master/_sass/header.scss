@@ -1,0 +1,257 @@
+.header{
+  background: $outer-space;
+  color: $white;
+  flex: 0 0 300px;
+  padding: 20px;
+  height: 100vh;
+  border-right: 2px solid $shadow;
+  border-bottom: none;
+
+  a.logo{
+    -webkit-backface-visibility: hidden;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.1s ease-in-out;
+    margin: 0px auto 20px;
+    background: $queen-blue;
+    color: $white;
+    position:relative;
+    top: 0px;
+    border: 2px solid $white;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    span {
+      flex: 0 0 auto;
+      align-self: center;
+      font-size: 26px;
+      font-weight: bold;
+    }
+  }
+  
+  a.logo:hover{
+    -ms-transform: scale(1.1, 1.1); /* IE 9 */
+    -webkit-transform: scale(1.25, 1.1); /* Safari */
+    transform: scale(1.1, 1.1);
+  }
+  .nav {
+    ul{
+      list-style: none;
+      padding: 0px;
+      li {
+        margin: 10px 0px;
+        a{
+          text-decoration: none;
+          font-weight: bold;
+          color: $wheat;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .social-links{
+    a {
+      .svg-icon {
+        transition: stroke 0.1s ease-in-out, fill 0.1s ease-in-out, transform 0.15s ease-in-out;
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+        margin-right: 10px;
+        stroke: $wheat;
+        fill: $wheat;
+      }
+    }
+    a:hover{
+      .svg-icon{
+        -ms-transform: scale(1.1, 1.1); /* IE 9 */
+        -webkit-transform: scale(1.25, 1.1); /* Safari */
+        transform: scale(1.1, 1.1);
+        stroke: $white;
+        fill: $white;
+      }
+    }
+  }
+
+}
+
+#toggleNav{
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.mobile-nav {
+  display: none;
+
+  .menu-line{
+    transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+   -moz-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+   -webkit-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
+    background: $wheat;
+    height: 3px;
+    width: 30px;
+    display: block;
+    margin: 5px;
+  }
+
+  #topLine{
+    &.rotated{
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+  }
+
+  #middleLine{
+    opacity: 1;
+    &.rotated{
+      opacity: 0;
+    }
+  }
+
+  #bottomLine{
+    &.rotated{
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+}
+
+
+// RESPONSIVE
+
+@media only screen and (max-width:768px) {
+  body {
+    .wrapper {
+      display: block;
+    }
+    .header{
+      height: auto;
+      width: 100%;
+      display: block;
+      padding: 5px 20px;
+      position: fixed;
+      z-index: 100;
+      box-shadow: 0px 0px 1px 2px $black;
+      border-right: none;
+
+      a.logo{
+        width: 40px;
+        height: 40px;
+        margin: 0px;
+        border: 1px solid $white;
+        span{
+          font-size: 11px;
+        }
+      }
+      h1 {
+        font-size: 2em;
+        margin: 0px;
+      }
+      .subtitle{
+        display: none;
+      }
+      .nav{
+        display: none;
+      }
+    }
+
+    .mobile-nav{
+      display: block;
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+
+    .main-col{
+      height: auto;
+      padding: 20px 20px 60px;
+      position: relative;
+      top: 40px;
+      h1 {
+         margin-top: 0px;
+      }
+    }
+
+    footer {
+      position: relative;
+    }
+
+    
+  }
+  
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  height: 0%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  background: $outer-space;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  display: flex;
+  justify-content: left;
+  transition: height 0.25s ease-in-out;
+  -webkit-transition: height 0.25s ease-in-out;
+
+  &.visible {
+    height: 100%;
+  }
+
+  .social-links{
+    text-align: left;
+    a {
+      display: inline-block;
+      .svg-icon {
+        transition: stroke 0.1s ease-in-out, fill 0.1s ease-in-out, transform 0.15s ease-in-out;
+        height: 25px;
+        width: 25px;
+        stroke: $wheat;
+        fill: $wheat;
+      }
+    }
+    a:hover{
+      .svg-icon{
+        -ms-transform: scale(1.1, 1.1); /* IE 9 */
+        -webkit-transform: scale(1.25, 1.1); /* Safari */
+        transform: scale(1.1, 1.1);
+        stroke: $white;
+        fill: $white;
+      }
+    }
+  }
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  flex: 0 0 auto;
+  position: relative;
+  top: 70px;
+  left: 20px;
+
+  ul{
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}

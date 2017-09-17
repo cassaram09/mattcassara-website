@@ -37,41 +37,59 @@
 
 	<body <?php body_class(); ?>>
 
-    <div class='menu-overlay'>
-      <?php html5blank_nav(); ?>
 
-      <a href='#'>
-        <svg class='svg-icon' id="si-dev-github_badge">
-          <use xlink:href="#si-dev-github_badge"></use>
-        </svg>
-      </a>
+    <div class="overlay">
 
-      <svg class='svg-icon' id="si-evil-envelope">
-        <use xlink:href="#si-evil-envelope"></use>
-      </svg>
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <?php html5blank_nav(); ?>
 
-      <svg class='svg-icon' id="si-evil-sc-linkedin">
-        <use xlink:href="#si-evil-sc-linkedin"></use>
-      </svg>
-    </div>
+         <div class='social-links'>
 
-    <nav id='mobile-nav' class="mobile-nav" role="navigation">
-      <div id='toggleNav'>
-        <span class='menu-line' id='topLine'></span>
-        <span class='menu-line' id='middleLine'></span>
-        <span class='menu-line' id='bottomLine'></span>
+          <a href='<?php echo the_field('github_url', 'option'); ?>'>
+            <svg class='svg-icon' id="si-dev-github_badge">
+              <use xlink:href="#si-dev-github_badge"></use>
+            </svg>
+          </a>
+
+          <a href="mailto:<?php echo the_field('email_url', 'option'); ?>">
+            <svg class='svg-icon' id="si-evil-envelope">
+              <use xlink:href="#si-evil-envelope"></use>
+            </svg>
+          </a>
+
+          <a href='<?php echo the_field('linkedin_url', 'option'); ?>'>
+            <svg class='svg-icon' id="si-evil-sc-linkedin">
+              <use xlink:href="#si-evil-sc-linkedin"></use>
+            </svg>
+          </a>
+        </div>
+        
       </div>
-    </nav>
+
+    </div>
 
 		<!-- wrapper -->
 		<div class='wrapper'>
 
 			<!-- header -->
-			<header id='header' class="navigation" role="banner">
+			<header id='header' class="header" role="banner">
 
-        <h1 id='title'>Matt Cassara</h1>
+        <a class='logo'>
+
+          <span>MWC</span>
+
+        </a>
 
         <h2 class='subtitle'>Full Stack Developer</h2>
+
+        <nav id='mobile-nav' class="mobile-nav" role="navigation">
+          <div id='toggleNav'>
+            <span class='menu-line' id='topLine'></span>
+            <span class='menu-line' id='middleLine'></span>
+            <span class='menu-line' id='bottomLine'></span>
+          </div>
+        </nav>
 
 				<!-- nav -->
 				<nav class="nav" role="navigation">
