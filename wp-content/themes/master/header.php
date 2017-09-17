@@ -40,9 +40,11 @@
     <div class='menu-overlay'>
       <?php html5blank_nav(); ?>
 
-      <svg class='svg-icon' id="si-dev-github_badge">
-        <use xlink:href="#si-dev-github_badge"></use>
-      </svg>
+      <a href='#'>
+        <svg class='svg-icon' id="si-dev-github_badge">
+          <use xlink:href="#si-dev-github_badge"></use>
+        </svg>
+      </a>
 
       <svg class='svg-icon' id="si-evil-envelope">
         <use xlink:href="#si-evil-envelope"></use>
@@ -75,17 +77,27 @@
 				<nav class="nav" role="navigation">
 					<?php html5blank_nav(); ?>
 
-          <svg class='svg-icon' id="si-dev-github_badge">
-            <use xlink:href="#si-dev-github_badge"></use>
-          </svg>
+          <div class='social-links'>
 
-          <svg class='svg-icon' id="si-evil-envelope">
-            <use xlink:href="#si-evil-envelope"></use>
-          </svg>
+            <a href='#'>
+              <svg class='svg-icon' id="si-dev-github_badge">
+                <use xlink:href="#si-dev-github_badge"></use>
+              </svg>
+            </a>
 
-          <svg class='svg-icon' id="si-evil-sc-linkedin">
-            <use xlink:href="#si-evil-sc-linkedin"></use>
-          </svg>
+            <a href='#'>
+              <svg class='svg-icon' id="si-evil-envelope">
+                <use xlink:href="#si-evil-envelope"></use>
+              </svg>
+            </a>
+
+            <a href='#'>
+              <svg class='svg-icon' id="si-evil-sc-linkedin">
+                <use xlink:href="#si-evil-sc-linkedin"></use>
+              </svg>
+            </a>
+          </div>
+          
 				</nav>
 
 

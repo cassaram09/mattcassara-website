@@ -583,6 +583,22 @@ table {
         font-weight: bold;
         color: #e5dfb0;
         font-size: 16px; }
+  .navigation .social-links a .svg-icon {
+    transition: stroke 0.1s ease-in-out, fill 0.1s ease-in-out, transform 0.15s ease-in-out;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    stroke: #e5dfb0;
+    fill: #e5dfb0; }
+  .navigation .social-links a:hover .svg-icon {
+    -ms-transform: scale(1.1, 1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.25, 1.1);
+    /* Safari */
+    transform: scale(1.1, 1.1);
+    stroke: #fff;
+    fill: #fff; }
 
 #toggleNav {
   cursor: pointer; }
@@ -742,7 +758,11 @@ h6 {
   font-size: 1.8em; }
 
 p {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  color: #46494c; }
+
+a {
+  color: #456990; }
 
 .bar {
   height: 2px;
@@ -753,7 +773,9 @@ p {
 .button {
   transition: color 0.15s linear, background 0.15s linear;
   display: inline-block;
-  background: #957964; }
+  background: #456990;
+  cursor: pointer;
+  border-radius: 5px; }
   .button a {
     display: block;
     padding: 10px 20px;
@@ -764,7 +786,7 @@ p {
 .button:hover {
   background: #46494c; }
   .button:hover a {
-    color: #e5dfb0; }
+    color: #fff; }
 
 .edit-post-link {
   margin: 10px 0px; }
@@ -821,14 +843,6 @@ input:focus {
 /* nav */
 /* sidebar */
 /* footer */
-.svg-icon {
-  display: inline-block;
-  height: 25px;
-  width: 25px;
-  margin-right: 10px;
-  stroke: #e5dfb0;
-  fill: #e5dfb0; }
-
 .hidden {
   visible: none;
   opacity: 0;
