@@ -2,7 +2,7 @@
 
 	<main role="main" class='main-col'>
 		<!-- section -->
-		<section>
+		<section class='blog'>
 
 			<h1><?php _e( 'Latest Posts', 'html5blank' ); ?></h1>
 
