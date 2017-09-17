@@ -32,10 +32,10 @@
           </h1>
         </div>
 
-        <div class='description'>
+        <div class='date'>
           <p>
-            <?php echo the_field('project_description')?>
-          </p>
+            <?php the_field('project_date'); ?>
+          <p>
         </div>
 
         <div class='project-links'>
@@ -50,15 +50,13 @@
           <?php endif; ?>
         </div>
 
-        <?php if( $gallery ): ?>
-          <div class='gallery'>
-            <?php foreach( $gallery as $image ): ?>
-              <div class='gallery-image'>
-                <img src="<?php echo $featured_image['url']; ?>" alt="<?php echo $featured_image['alt']; ?>" />
-              </div>
-            <?php endforeach; ?>
-          </div>
-        <?php endif; ?>
+        <div class='bar'></div>
+
+        <div class='description'>
+          <p>
+            <?php echo the_field('project_description')?>
+          </p>
+        </div>
 
         <div class='edit-post-link'>
           <?php edit_post_link(); ?>

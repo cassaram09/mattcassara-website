@@ -1,6 +1,19 @@
-.single-project {
+section.single-project {
+  max-width: 768px;
+  margin: 0px auto;
   .title{
-    margin: 20px 0px;
+    margin: 20px 0px 0px;
+    h1 { 
+      margin: 0px;
+      font-size: 4em;
+    }
+  }
+
+  .date{
+    margin: 0px;
+    p{
+      margin: 0px;
+    }
   }
 
   .description{
@@ -8,6 +21,7 @@
   }
 
   .featured-image {
+    border: 2px solid $outer-space;
     img{
       width:100%;
       height: 200px;

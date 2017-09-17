@@ -73,6 +73,14 @@ p {
   font-size: 1.5em;
 }
 
+.bar {
+
+    height: 2px;
+    background: $wheat;
+    margin: 40px 20px 0px;
+    display: block;
+}
+
 .button{
   transition: color 0.15s linear, background 0.15s linear;
   display: inline-block;
