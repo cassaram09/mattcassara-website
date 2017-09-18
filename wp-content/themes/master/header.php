@@ -76,9 +76,7 @@
 			<header id='header' class="header" role="banner">
 
         <a class='logo'>
-
           <span>MWC</span>
-
         </a>
 
         <h2 class='subtitle'>Full Stack Developer</h2>

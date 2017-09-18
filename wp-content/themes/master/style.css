@@ -568,19 +568,20 @@ table {
   flex: 0 0 300px;
   padding: 20px;
   height: 100vh;
-  border-right: 2px solid #957964;
-  border-bottom: none; }
+  border-right: 2px solid #456990;
+  border-bottom: none;
+  text-align: center; }
   .header a.logo {
     -webkit-backface-visibility: hidden;
     cursor: pointer;
     z-index: 10;
-    transition: transform 0.7s cubic-bezier(0.6, -0.45, 0.49, 0.98);
+    transition: 0.7s cubic-bezier(0.6, -0.45, 0.49, 0.98);
     margin: 0px auto 20px;
     background: #456990;
     color: #fff;
     position: relative;
     top: 0px;
-    border: 2px solid #fff;
+    border: 2px solid #bbb;
     border-radius: 100%;
     display: block;
     text-align: center;
@@ -598,31 +599,41 @@ table {
     /* IE 9 */
     -webkit-transform: scale(1.1, 1.1) rotate(360deg);
     /* Safari */
-    transform: scale(1.1, 1.1) rotate(360deg); }
+    transform: scale(1.1, 1.1) rotate(360deg);
+    border: 2px solid #fff; }
   .header .nav ul {
     list-style: none;
-    padding: 0px; }
+    padding: 0px;
+    margin-bottom: 25px; }
     .header .nav ul li {
       margin: 10px 0px; }
       .header .nav ul li a {
         text-decoration: none;
         font-weight: bold;
-        color: #e5dfb0;
-        font-size: 16px; }
-  .header .social-links a .svg-icon {
-    transition: stroke 0.1s ease-in-out, fill 0.1s ease-in-out, transform 0.15s ease-in-out;
+        color: #bbb;
+        font-size: 20px;
+        -ms-transform: 0.3s ease-in-out;
+        /* IE 9 */
+        -webkit-transform: 0.3s ease-in-out;
+        /* Safari */
+        transition: 0.3s ease-in-out; }
+        .header .nav ul li a:hover, .header .nav ul li a:focus {
+          color: #fff; }
+  .header .social-links a {
     display: inline-block;
-    height: 25px;
-    width: 25px;
-    margin-right: 10px;
-    stroke: #e5dfb0;
-    fill: #e5dfb0; }
+    margin: 10px; }
+    .header .social-links a .svg-icon {
+      -ms-transform: 0.3s ease-in-out;
+      /* IE 9 */
+      -webkit-transform: 0.3s ease-in-out;
+      /* Safari */
+      transition: 0.3s ease-in-out;
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      stroke: #e5dfb0;
+      fill: #e5dfb0; }
   .header .social-links a:hover .svg-icon {
-    -ms-transform: scale(1.1, 1.1);
-    /* IE 9 */
-    -webkit-transform: scale(1.25, 1.1);
-    /* Safari */
-    transform: scale(1.1, 1.1);
     stroke: #fff;
     fill: #fff; }
 
@@ -632,11 +643,15 @@ table {
 
 .mobile-nav {
   display: none; }
+  .mobile-nav:hover #topLine, .mobile-nav:hover #middleLine, .mobile-nav:hover #bottomLine {
+    background: #fff; }
   .mobile-nav .menu-line {
-    transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
-    -moz-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
-    -webkit-transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
-    background: #e5dfb0;
+    -ms-transform: 0.3s ease-in-out;
+    /* IE 9 */
+    -webkit-transform: 0.3s ease-in-out;
+    /* Safari */
+    transition: 0.3s ease-in-out;
+    background: #bbb;
     height: 3px;
     width: 30px;
     display: block;
@@ -666,9 +681,17 @@ table {
       width: 35px;
       height: 35px;
       margin: 0px;
-      border: 2px solid #fff; }
+      border: 1px solid #bbb; }
       body .header a.logo span {
         font-size: 9px; }
+      body .header a.logo:hover {
+        -ms-transform: none;
+        /* IE 9 */
+        -webkit-transform: none;
+        /* Safari */
+        transform: none;
+        border: 1px solid #fff;
+        transition: 0.3s ease-in-out; }
     body .header h1 {
       font-size: 2em;
       margin: 0px; }
@@ -694,67 +717,52 @@ table {
 
 /* The Overlay (background) */
 .overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */
   height: 0%;
   width: 100%;
   position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
+  z-index: 10;
   background: #46494c;
   overflow-x: hidden;
-  /* Disable horizontal scroll */
   transition: 0.5s;
-  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
   display: flex;
-  justify-content: left;
+  justify-content: center;
   transition: height 0.25s ease-in-out;
   -webkit-transition: height 0.25s ease-in-out; }
   .overlay.visible {
     height: 100%; }
   .overlay .social-links {
-    text-align: left; }
+    text-align: center; }
     .overlay .social-links a {
       display: inline-block; }
       .overlay .social-links a .svg-icon {
-        transition: stroke 0.1s ease-in-out, fill 0.1s ease-in-out, transform 0.15s ease-in-out;
-        height: 25px;
-        width: 25px;
+        transition: 0.3s ease-in-out;
+        height: 30px;
+        width: 30px;
         stroke: #e5dfb0;
         fill: #e5dfb0; }
     .overlay .social-links a:hover .svg-icon {
-      -ms-transform: scale(1.1, 1.1);
-      /* IE 9 */
-      -webkit-transform: scale(1.25, 1.1);
-      /* Safari */
-      transform: scale(1.1, 1.1);
       stroke: #fff;
       fill: #fff; }
-
-/* Position the content inside the overlay */
-.overlay-content {
-  flex: 0 0 auto;
-  position: relative;
-  top: 70px;
-  left: 20px; }
-  .overlay-content ul {
-    padding: 0px;
-    margin: 0px; }
-
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  /* Display block instead of inline */
-  transition: 0.3s;
-  /* Transition effects on hover (color) */ }
-
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1; }
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #bbb;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s ease-in-out;
+    /* Transition effects on hover (color) */ }
+    .overlay a:hover, .overlay a:focus {
+      color: #fff; }
+  .overlay .overlay-content {
+    flex: 0 0 auto;
+    position: relative;
+    align-self: center;
+    top: -70px; }
+    .overlay .overlay-content ul {
+      text-align: center;
+      padding: 0px;
+      margin: 0px 0px 20px; }
 
 section.single-project {
   max-width: 768px;
