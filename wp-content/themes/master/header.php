@@ -30,8 +30,8 @@
       integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
       crossorigin="anonymous"></script>
 
-       <?php include("img/dev-sprite.svg"); ?>
-      <?php include_once("img/generic-sprite.svg"); ?>
+    <?php include("img/dev-sprite.svg"); ?>
+    <?php include_once("img/generic-sprite.svg"); ?>
 
 	</head>
 
@@ -75,7 +75,7 @@
 			<!-- header -->
 			<header id='header' class="header" role="banner">
 
-        <a class='logo'>
+        <a class='logo' href='<?php echo get_site_url(); ?>'>
           <span>MWC</span>
         </a>
 
