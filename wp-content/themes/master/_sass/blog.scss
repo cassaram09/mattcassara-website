@@ -2,3 +2,68 @@ section.blog{
   max-width: 768px;
   margin: 0px auto;
 }
+
+.pagination{
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid $deep-space;
+  .page-numbers{
+    font-size: 20px;
+    margin-right: 10px;
+    border: 2px solid $deep-space;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 22px;
+    -ms-transition: 0.3s ease-in-out; /* IE 9 */
+    -webkit-transition: 0.3s ease-in-out; /* Safari */
+    transition: 0.3s ease-in-out;
+    background: $white;
+    color: $outer-space;
+
+    &:hover{
+      background: $queen-blue;
+      color: $white;
+      border: 2px solid $queen-blue;
+    }
+
+    &.current{
+      font-size: 20px;
+      background: $queen-blue;
+      color: $white;
+      border: 2px solid $queen-blue;
+    }
+    &.next{
+      color: $outer-space;
+      background: none;
+      border: none;
+      font-size: 20px;
+      width: auto;
+      position: relative;
+      top: 2px;
+      font-weight: bold;
+
+      &:hover {
+        color: $queen-blue;
+      }
+    }
+    &.prev{
+      color: $outer-space;
+      background: none;
+      border: none;
+      font-size: 20px;
+      width: auto;
+      position: relative;
+      top: 2px;
+      font-weight: bold;
+
+      &:hover {
+        color: $queen-blue;
+      }
+    }
+
+
+  }
+}

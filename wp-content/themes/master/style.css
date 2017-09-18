@@ -797,6 +797,59 @@ section.blog {
   max-width: 768px;
   margin: 0px auto; }
 
+.pagination {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #4c5c68; }
+  .pagination .page-numbers {
+    font-size: 20px;
+    margin-right: 10px;
+    border: 2px solid #4c5c68;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 22px;
+    -ms-transition: 0.3s ease-in-out;
+    /* IE 9 */
+    -webkit-transition: 0.3s ease-in-out;
+    /* Safari */
+    transition: 0.3s ease-in-out;
+    background: #fff;
+    color: #46494c; }
+    .pagination .page-numbers:hover {
+      background: #456990;
+      color: #fff;
+      border: 2px solid #456990; }
+    .pagination .page-numbers.current {
+      font-size: 20px;
+      background: #456990;
+      color: #fff;
+      border: 2px solid #456990; }
+    .pagination .page-numbers.next {
+      color: #46494c;
+      background: none;
+      border: none;
+      font-size: 20px;
+      width: auto;
+      position: relative;
+      top: 2px;
+      font-weight: bold; }
+      .pagination .page-numbers.next:hover {
+        color: #456990; }
+    .pagination .page-numbers.prev {
+      color: #46494c;
+      background: none;
+      border: none;
+      font-size: 20px;
+      width: auto;
+      position: relative;
+      top: 2px;
+      font-weight: bold; }
+      .pagination .page-numbers.prev:hover {
+        color: #456990; }
+
 /*------------------------------------*    MAIN
 \*------------------------------------*/
 /* global box-sizing */
@@ -917,15 +970,13 @@ input:focus {
   display: flex;
   flex-direction: row; }
 
-/* header */
-/* logo */
-/* nav */
-/* sidebar */
-/* footer */
-.hidden {
-  visible: none;
-  opacity: 0;
-  display: none; }
+.main {
+  background: #fff;
+  flex-grow: 1;
+  color: #4c5c68;
+  overflow: scroll;
+  height: 100vh;
+  padding: 20px 40px; }
 
 /*------------------------------------*    RESPONSIVE
 \*------------------------------------*/
@@ -933,7 +984,7 @@ input:focus {
   body footer {
     padding: 10px; }
   body .main {
-    padding-top: 70px; } }
+    padding: 70px 20px 20px; } }
 
 /*------------------------------------*    MISC
 \*------------------------------------*/
@@ -990,18 +1041,3 @@ input:focus {
   h2,
   h3 {
     page-break-after: avoid; } }
-
-.main {
-  background: #fff;
-  flex-grow: 1;
-  color: #4c5c68;
-  overflow: scroll;
-  height: 100vh;
-  padding: 20px; }
-
-footer {
-  color: #fff;
-  z-index: 10; }
-  footer p {
-    margin: 0px;
-    color: #fff; }
