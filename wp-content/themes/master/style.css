@@ -931,7 +931,9 @@ input:focus {
 \*------------------------------------*/
 @media only screen and (max-width: 768px) {
   body footer {
-    padding: 10px; } }
+    padding: 10px; }
+  body .main {
+    padding-top: 70px; } }
 
 /*------------------------------------*    MISC
 \*------------------------------------*/
@@ -989,7 +991,7 @@ input:focus {
   h3 {
     page-break-after: avoid; } }
 
-.main-col {
+.main {
   background: #fff;
   flex-grow: 1;
   color: #4c5c68;
@@ -999,11 +1001,7 @@ input:focus {
 
 footer {
   color: #fff;
-  background: #456990;
-  position: fixed;
-  width: 100%;
-  bottom: 0px;
-  padding: 5px 20px; }
+  z-index: 10; }
   footer p {
     margin: 0px;
-    text-align: right; }
+    color: #fff; }

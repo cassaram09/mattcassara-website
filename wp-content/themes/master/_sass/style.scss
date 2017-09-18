@@ -211,6 +211,10 @@ input:focus {
     footer {
       padding: 10px;
     }
+
+    .main{
+      padding-top: 70px;
+    }
   }
 }
 
@@ -289,7 +293,7 @@ input:focus {
   }
 }
 
-.main-col{
+.main{
   background: $white;
   flex-grow: 1;
   color: $deep-space;
@@ -301,14 +305,10 @@ input:focus {
 
 footer {
   color: $white;
-  background: $queen-blue;
-  position: fixed;
-  width: 100%;
-  bottom: 0px;
-  padding: 5px 20px;
+  z-index: 10;
   p {
     margin: 0px;
-    text-align: right;
+    color: $white;
   }
 }
 
