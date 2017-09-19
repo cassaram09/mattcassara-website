@@ -675,7 +675,6 @@ table {
     padding: 5px 20px;
     position: fixed;
     z-index: 100;
-    box-shadow: 0px 0px 1px 2px #333;
     border-right: none; }
     body .header a.logo {
       width: 35px;
@@ -896,6 +895,126 @@ p {
 a {
   color: #456990; }
 
+blockquote {
+  border-left: 4px solid #456990;
+  padding: 1px 20px;
+  margin: 20px 40px;
+  background-color: rgba(200, 200, 200, 0.05); }
+  blockquote p {
+    margin: 10px 0px;
+    font-size: 18px;
+    font-style: italic; }
+
+ol, ul {
+  padding-left: 30px;
+  font-size: 16px; }
+  ol li, ul li {
+    padding-left: 10px; }
+
+.comment-form p.comment-form-comment textarea {
+  width: 100%;
+  display: block; }
+
+.comment-form p.comment-form-author input {
+  width: 100%;
+  display: block; }
+
+.comment-form p.comment-form-email input {
+  width: 100%;
+  display: block; }
+
+.comment-form p.comment-form-url input {
+  width: 100%;
+  display: block; }
+
+.comment-form p.form-submit input {
+  display: block;
+  background: #4c5c68;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  display: block;
+  border-radius: 2px;
+  transition: 0.3s; }
+  .comment-form p.form-submit input:hover {
+    background: #456990; }
+
+.post-title {
+  font-size: 4em;
+  margin-bottom: 5px; }
+
+.border {
+  height: 1px;
+  /* width: 100%; */
+  background: #456990;
+  margin: 20px 0px; }
+
+span.date {
+  margin-left: 5px; }
+
+div.comments {
+  border-top: 1px solid grey;
+  padding-top: 30px;
+  margin-top: 30px; }
+  div.comments ul.comments-list {
+    padding: 0px;
+    font-size: 14px;
+    list-style: none; }
+    div.comments ul.comments-list li ul.children {
+      list-style: none;
+      padding-left: 20px; }
+      div.comments ul.comments-list li ul.children li {
+        padding-left: 20px; }
+    div.comments ul.comments-list li .comment-respond {
+      margin-left: 40px; }
+      div.comments ul.comments-list li .comment-respond h3 {
+        font-size: 1.5em; }
+        div.comments ul.comments-list li .comment-respond h3 a#cancel-comment-reply-link {
+          background: #46494c;
+          display: inline-block;
+          padding: 5px 10px;
+          font-size: 12px;
+          position: relative;
+          bottom: 2px;
+          margin-left: 5px;
+          color: white;
+          transition: 0.3s; }
+          div.comments ul.comments-list li .comment-respond h3 a#cancel-comment-reply-link:hover {
+            background: #456990; }
+  div.comments .comment-body {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #46494c; }
+    div.comments .comment-body p {
+      font-size: 1.1em;
+      margin: 5px 0px 10px 10px; }
+    div.comments .comment-body .comment-meta {
+      margin: 10px 0px 0px 10px; }
+    div.comments .comment-body .reply {
+      margin-bottom: 10px; }
+      div.comments .comment-body .reply a.comment-reply-link {
+        background: #46494c;
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 12px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+        margin-left: 10px;
+        transition: 0.3s; }
+        div.comments .comment-body .reply a.comment-reply-link:hover {
+          background: #456990; }
+  div.comments .avatar {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px; }
+  div.comments .comment-author {
+    margin: 0px 0px 0px 10px; }
+    div.comments .comment-author span.fn {
+      margin-left: 10px;
+      position: relative;
+      bottom: 15px;
+      font-size: 14px; }
+
 .bar {
   height: 2px;
   background: #e5dfb0;
@@ -977,6 +1096,9 @@ input:focus {
   overflow: scroll;
   height: 100vh;
   padding: 20px 40px; }
+  .main section {
+    max-width: 768px;
+    margin: 0px auto; }
 
 /*------------------------------------*    RESPONSIVE
 \*------------------------------------*/

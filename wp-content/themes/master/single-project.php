@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  <main role="main" class='main-col'>
+  <main role="main" class='main'>
     <!-- section -->
     <section class='single-project'>
 

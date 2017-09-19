@@ -79,6 +79,195 @@ a {
   color: $queen-blue;
 }
 
+blockquote{
+  border-left: 4px solid $queen-blue;
+  padding: 1px 20px;
+  margin: 20px 40px;
+  background-color: rgba(200,200,200,0.05);
+
+  p {
+    margin: 10px 0px;
+    font-size: 18px;
+    font-style: italic;
+  }
+}
+
+ol, ul {
+  padding-left: 30px;
+  font-size: 16px;
+  li{
+    padding-left: 10px;
+  }
+}
+
+
+    
+
+// Comment
+.comment-form{
+
+  p.comment-form-comment {
+    textarea{
+      width: 100%;
+      display: block;
+    }
+  }
+
+  p.comment-form-author {
+    input{
+      width: 100%;
+      display: block;
+    }
+  }
+
+  p.comment-form-email {
+    input {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  p.comment-form-url {
+    input {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  p.form-submit {
+    input {
+      display: block;
+      background: $deep-space;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      display: block;
+      border-radius: 2px;
+      transition: 0.3s;
+
+      &:hover {
+        background: $queen-blue;
+      }
+    }
+  }
+
+}
+
+.post-title{
+  font-size: 4em;
+  margin-bottom: 5px;
+}
+
+.border{
+   height: 1px;
+  /* width: 100%; */
+  background: $queen-blue;
+  margin: 20px 0px;
+
+}
+
+span.date{
+  margin-left:5px;
+}
+
+div.comments {
+  border-top: 1px solid grey;
+  padding-top: 30px;
+  margin-top: 30px;
+
+  ul.comments-list {
+    padding: 0px;
+    font-size: 14px;
+    list-style: none;
+
+    li {
+      ul.children{
+        list-style: none;
+        padding-left: 20px;
+        li{
+          padding-left: 20px;
+        }
+      }
+      .comment-respond{
+        margin-left: 40px;
+
+        h3{
+          font-size: 1.5em;
+
+          a#cancel-comment-reply-link {
+            background: $outer-space;
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            position: relative;
+            bottom: 2px;
+            margin-left: 5px;
+            color: white;
+            transition: 0.3s;
+
+            &:hover{
+              background: $queen-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .comment-body{
+    margin-bottom: 20px;
+    border-bottom: 1px solid $outer-space;
+
+    p{
+      font-size: 1.1em;
+      margin: 5px 0px 10px 10px;
+    }
+
+    .comment-meta{
+      margin: 10px 0px 0px 10px;
+    }
+
+    .reply{
+      margin-bottom: 10px;
+
+      a.comment-reply-link{
+        background: $outer-space;
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 12px;
+        position: relative;
+        bottom: 2px;
+        color: white;
+        margin-left: 10px;
+        transition: 0.3s;
+
+        &:hover{
+          background: $queen-blue;
+        }
+      }
+    }
+  }
+
+  .avatar{
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .comment-author{
+    margin: 0px 0px 0px 10px;
+    span.fn{
+      margin-left: 10px;
+      position: relative;
+      bottom: 15px;
+      font-size: 14px;
+    }
+  }
+
+
+}
+
+
 .bar {
 
     height: 2px;
@@ -167,12 +356,18 @@ input:focus {
 }
 
 .main{
+
+  section{
+     max-width: 768px;
+  margin: 0px auto;
+  }
   background: $white;
   flex-grow: 1;
   color: $deep-space;
   overflow: scroll;
   height: 100vh;
   padding: 20px 40px;
+ 
 }
 
 /*------------------------------------*\
