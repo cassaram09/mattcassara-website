@@ -1,63 +1,53 @@
 <?php get_header(); ?>
 
 	<main role="main" class='main'>
-	<!-- section -->
-	<section>
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+		<section>
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php if (have_posts()): ?>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+			<?php while (have_posts()) : the_post(); ?>
 
-			<!-- post title -->
-			<h1 class='post-title'>
-				<a  href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?></span>
-			<!-- /post details -->
+					<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+							<?php the_post_thumbnail(); // Fullsize image for the single post ?>
+						</a>
+					<?php endif; ?>
 
-			<div class='border'></div>
-			
-			<?php the_content(); // Dynamic Content ?>
+					<h1 class='post-title'>
+						<a  href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+					</h1>
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+					<span class="date"><?php the_time('F j, Y'); ?></span>
 
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+					<div class='border'></div>
+					
+					<?php the_content(); ?>
 
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+					<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>');  ?>
 
-			<?php comments_template(); ?>
+					<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); ?></p>
 
-		</article>
-		<!-- /article -->
+					<?php edit_post_link(); ?>
 
-	<?php endwhile; ?>
+					<?php comments_template(); ?>
 
-	<?php else: ?>
+				</article>
 
-		<!-- article -->
-		<article>
+			<?php endwhile; ?>
 
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+		<?php else: ?>
 
-		</article>
-		<!-- /article -->
+			<article>
+				<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+			</article>
 
-	<?php endif; ?>
+		<?php endif; ?>
 
-	</section>
-	<!-- /section -->
+		</section>
+
 	</main>
 
 <?php get_footer(); ?>
