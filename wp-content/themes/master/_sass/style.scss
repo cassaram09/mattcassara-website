@@ -16,6 +16,7 @@
 @import 'simplegrid';
 @import 'header';
 @import 'single-project';
+@import 'projects';
 @import 'blog';
 
 /*------------------------------------*\
@@ -356,17 +357,18 @@ input:focus {
 }
 
 .main{
-
-  section{
-     max-width: 768px;
-  margin: 0px auto;
-  }
   background: $white;
   flex-grow: 1;
   color: $deep-space;
   overflow: scroll;
   height: 100vh;
   padding: 20px 40px;
+  
+  section{
+    max-width: 768px;
+    margin: 0px auto;
+  }
+  
  
 }
 
