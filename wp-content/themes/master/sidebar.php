@@ -1,4 +1,3 @@
-<!-- sidebar -->
 <aside class="sidebar" role="complementary">
 
   <div class="sidebar-widget">
@@ -6,4 +5,3 @@
   </div>
 
 </aside>
-<!-- /sidebar -->
